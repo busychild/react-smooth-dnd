@@ -1,5 +1,5 @@
 {
-  "name": "@test137e29b/react-smooth-dnd",
+  "name": "@busychild/react-smooth-dnd",
   "version": "0.12.11",
   "description": "Drag and Drop library",
   "main": "./dist/index.js",
