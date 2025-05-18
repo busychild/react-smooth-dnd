@@ -1,4 +1,4 @@
-import React, { Component, CSSProperties } from 'react';
+import React, {Component, CSSProperties, ReactNode} from 'react';
 import PropTypes from 'prop-types';
 import { smoothDnD as container, ContainerOptions, SmoothDnD, dropHandlers } from '@test137e29b/smooth-dnd';
 
@@ -6,6 +6,7 @@ container.dropHandler = dropHandlers.reactDropHandler().handler;
 container.wrapChild = false;
 
 interface ContainerProps extends ContainerOptions {
+    children?: ReactNode;
 	render?: (rootRef: React.RefObject<any>) => React.ReactElement;
 	style?: CSSProperties;
 }
@@ -115,7 +116,7 @@ class Container extends Component<ContainerProps> {
       );
     }
 	}
-	
+
   getContainer() {
 		return this.containerRef.current;
 	}
